@@ -69,5 +69,4 @@ Avant de commencer, assurez-vous d'avoir installé :
 ### 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/votre-utilisateur/gestion-employes.git
-cd gestion-employes
+git clone https://github.com/Francette555/projetNodeJS.git
