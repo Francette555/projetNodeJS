@@ -94,42 +94,15 @@ function Home() {
         </Col>
       </Row>
 
-      <Row>
-        <Col md={6}>
-          <Card className="shadow-lg border-0">
-            <Card.Header style={{ background: '#02061E', color: 'white' }}>
-              <h5 className="mb-0">📊 Statistiques rapides</h5>
-            </Card.Header>
-            <Card.Body>
-              <div className="stat-details">
-                <p><strong>Étendue des salaires :</strong> {(bilan.max - bilan.min).toLocaleString('fr-FR')} Ar</p>
-                <p><strong>Ratio max/min :</strong> {(bilan.max / bilan.min).toFixed(2)}</p>
-                <p><strong>Masse salariale :</strong> {bilan.total.toLocaleString('fr-FR')} Ar</p>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={6}>
-          <Card className="shadow-lg border-0">
-            <Card.Header style={{ background: '#02061E', color: 'white' }}>
-              <h5 className="mb-0">👥 Derniers employés ajoutés</h5>
-            </Card.Header>
-            <Card.Body>
-              {recentEmployees.length > 0 ? (
-                <ul className="list-unstyled">
-                  {recentEmployees.map((emp, idx) => (
-                    <li key={idx} className="border-bottom pb-2 mb-2" style={{ borderBottomColor: '#0671B6 !important' }}>
-                      <strong style={{ color: '#5B11EE' }}>{emp.nom}</strong> - <span style={{ color: '#5E5E5E' }}>{emp.salaire.toLocaleString('fr-FR')} Ar</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-muted">Aucun employé pour le moment</p>
-              )}
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      {/* Footer */}
+      <footer className="text-center mt-5 pt-3 border-top" style={{ color: '#5E5E5E', borderTopColor: '#E0E0E0 !important' }}>
+        <p className="mb-2">
+          &copy; {new Date().getFullYear()} - Gestion des Employés
+        </p>
+        <p className="mb-0 small">
+          Application de gestion des salaires | Tous droits réservés
+        </p>
+      </footer>
     </Container>
   );
 }
